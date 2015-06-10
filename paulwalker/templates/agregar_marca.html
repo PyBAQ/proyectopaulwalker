@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}:: Lista de marcas{% endblock %}
+
+{% block content %}
+
+    <style>
+    div.red{
+        color: red;
+    }
+    </style>
+
+    <h1>Agregar Nueva Marca</h1>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.nombre.label_tag }}
+    {{ form.nombre }}
+
+    <input type="submit" value="Guardar Marca">
+    </form>
+{% endblock %}
