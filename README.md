@@ -1,5 +1,5 @@
 # proyectopaulwalker
-Version inicial, muy alpha con propósitos de aprendizaje del grupo de Django Barranquilla.
+Versión inicial, muy alpha con propósitos de aprendizaje del grupo de Django Barranquilla.
 
 ### Requerimientos
 
@@ -9,8 +9,11 @@ Version inicial, muy alpha con propósitos de aprendizaje del grupo de Django Ba
  * Django 1.8.2
  * Editor de texto (Sublime Text, Atom, etc)
 
-## primera etapa
-Demostracion de ruteo de urls, modelo basico y vistas basadas en funciones
+## Primera etapa
+Demostración de ruteo de urls, modelo básico y vistas basadas en funciones
 
-## segunda etapa
+## Segunda etapa
+Habilitando los modelos de administrador de Carros y Marca, y sus filtros para listar. Personalización del título del administrador.
+
+## Tercera etapa
 - TODO
