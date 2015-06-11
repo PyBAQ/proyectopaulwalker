@@ -1,0 +1,13 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Paul Walker | {{ title }} {% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+	<a href="{% url 'admin:index' %}">
+		Paul <strong>Walker</strong>
+	</a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
