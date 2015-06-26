@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import Carro, Marca
 
+
 class CarrosAdmin(admin.ModelAdmin):
     fields = ['nombre', 'marca']
     list_display = ('nombre', 'marca')

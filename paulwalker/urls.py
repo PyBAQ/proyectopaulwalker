@@ -20,7 +20,5 @@ from paulwalker import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.home, name="home"),
-    url(r'^carros/$', views.listar_carros, name="listar_carros"),
-    url(r'^marcas/$', views.listar_marcas, name="listar_marcas"),
-    url(r'^marcas/agregar/$', views.agregar_marca, name="agregar_marca"),
+    url(r'^carros/', include('carros.urls')),
 ]

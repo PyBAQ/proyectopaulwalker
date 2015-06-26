@@ -4,6 +4,8 @@
 
 {% block content %}
     <h1>Lista de marcas</h1>
+    <a class="btn btn-default" href="{% url 'agregar_marca' %}" role="button">Agregar Marca</a>
+    <br>
     {% for m in marcas %}
         <p>{{ m.nombre }}</p>
     {% endfor %}
