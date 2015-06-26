@@ -3,8 +3,10 @@
 {% block titulo %}:: Lista de carros{% endblock %}
 
 {% block content %}
+    
     <h1>Lista de carros</h1>
     {% for c in carros %}
         <p>{{ c.nombre }} - {{ c.marca }}</p>
     {% endfor %}
+
 {% endblock %}
