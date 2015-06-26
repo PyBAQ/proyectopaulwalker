@@ -1,12 +1,14 @@
 from django.db import models
 
+
 class Marca(models.Model):
     nombre = models.CharField(
-        max_length=255
+        max_length=255, unique=True,
     )
 
     def __unicode__(self):
         return self.nombre
+
 
 class Carro(models.Model):
     nombre = models.CharField(
@@ -18,5 +20,3 @@ class Carro(models.Model):
 
     def __unicode__(self):
         return self.nombre
-
-
