@@ -1,0 +1,23 @@
+[
+{
+  "fields": {
+    "nombre": "marca1"
+  },
+  "model": "carros.marca",
+  "pk": 1
+},
+{
+  "fields": {
+    "nombre": "marca2"
+  },
+  "model": "carros.marca",
+  "pk": 2
+},
+{
+  "fields": {
+    "nombre": "marca3"
+  },
+  "model": "carros.marca",
+  "pk": 3
+}
+]
