@@ -3,10 +3,53 @@
 {% block titulo %}:: Lista de marcas{% endblock %}
 
 {% block content %}
-    <h1>Lista de marcas</h1>
-    <a class="btn btn-default" href="{% url 'agregar_marca' %}" role="button">Agregar Marca</a>
-    <br>
-    {% for m in marcas %}
-        <p>{{ m.nombre }}</p>
-    {% endfor %}
+    {% load staticfiles %}
+	<section id="portfolio_single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portfolio-header text-center">
+                        <h2>Lista de marcas</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="related">
+	    <div class="container">
+	        <div class="row">
+	             <div class="related text-center">
+	              {% for m in marcas %}
+		    
+	                <div class="col-md-3 col-sm-6">
+	                    <div class="rel-post">
+	                        <a href="#">
+	                            <img src="{% static 'carros/images/blog/pic12.jpg' %}" alt="" class="img-responsive">
+	                            <div class="caption">
+	                                <h4>{{ m.nombre }}</h4>
+	                            </div>
+	                        </a>
+	                    </div>
+	                </div>
+	                {% endfor %}
+	            </div>
+	        </div>
+	    </div>
+	</section>
+    <section id="port-content">
+    <div class="container">
+        <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="sidebar">
+                        <div class="portfolio-desc">
+                            <h4>Agregar Marcas</h4>
+                            <p>Agrega más marcas para los vehiculos de Paul Walker.
+                            </p>
+                        <p><a href="{% url 'agregar_marca' %}" class="btn btn-main featured">Agregar Marca</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

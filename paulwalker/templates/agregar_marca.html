@@ -9,13 +9,40 @@
         color: red;
     }
     </style>
+    <section id="portfolio_single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portfolio-header text-center">
+                        <h2>Agregar Nueva Marca</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h1>Agregar Nueva Marca</h1>
-    <form method="post">
-    {% csrf_token %}
-    {{ form.nombre.label_tag }}
-    {{ form.nombre }}
 
-    <input type="submit" value="Guardar Marca">
-    </form>
+<section id="related">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 center">
+                <div class="">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-level">
+                            <label for="id_nombre">Nombre de la marca:</label>
+                        </div>
+                        <div class="form-level">
+                            {{ form.nombre }}
+                            <span class="form-icon fa fa-car"></span>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-main featured">Guardar Marca</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    
 {% endblock %}

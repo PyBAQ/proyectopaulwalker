@@ -3,10 +3,39 @@
 {% block titulo %}:: Lista de carros{% endblock %}
 
 {% block content %}
-    
-    <h1>Lista de carros</h1>
-    {% for c in carros %}
-        <p>{{ c.nombre }} - {{ c.marca }}</p>
-    {% endfor %}
+	{% load staticfiles %}
+	<section id="portfolio_single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portfolio-header text-center">
+                        <h2>Lista de carros</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="related">
+	    <div class="container">
+	        <div class="row">
+	             <div class="related text-center">
+	              {% for c in carros %}
+		    
+	                <div class="col-md-3 col-sm-6">
+	                    <div class="rel-post">
+	                        <a href="#">
+	                            <img src="{% static 'carros/images/blog/pic6.jpg' %}" alt="" class="img-responsive">
+	                            <div class="caption">
+	                                <h4>{{ c.nombre }}</h4>
+	                                <p>{{ c.marca }}</p>
+	                            </div>
+	                        </a>
+	                    </div>
+	                </div>
+	                {% endfor %}
+	            </div>
+	        </div>
+	    </div>
+	</section>
 
 {% endblock %}
