@@ -1,0 +1,635 @@
+{% extends "base.html" %}
+
+{% block titulo %}:: Inicio{% endblock %}
+
+{% block content %}
+ <!-- Slider start -->
+ {% load staticfiles %}
+    <section id="slider_part">
+         <div class="carousel slide" id="carousel-example-generic" data-ride="carousel">
+            <!-- Indicators -->
+           <ol class="carousel-indicators text-center">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+             </ol>
+
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="overlay-slide">
+                  <img src="{% static 'carros/images/banner/p5.jpg' %}" alt="" class="img-responsive">
+                </div>
+                <div class="carousel-caption">
+                    <div class="col-md-12 col-xs-12 text-center">
+                      <h2>Proyecto Paul Walker</h2>
+                      <h3 class="animated2"> <b>Tributo</b> a Paul Walker </h3>
+                      <div class="line"></div>
+                      <p class="animated3">In memoriam</p>
+                    </div>
+                </div>
+              </div>
+                <div class="item">
+                    <div class="overlay-slide">
+                        <img src="{% static 'carros/images/banner/p3.jpg' %}" alt="" class="img-responsive">
+                </div>
+                <div class="carousel-caption">
+                    <div class="col-md-12 col-xs-12 text-center">
+                    <h2>Proyecto Paul Walker</h2>
+                      <h3 class="animated3"> Ciclo básico de <b>Django </b></h3>
+                      <div class="line"></div>
+                      <p class="animated2">Práctica básica del tutorial</p>
+                    </div>
+                </div>
+              </div>
+              <div class="item">
+                    <div class="overlay-slide">
+                        <img src="{% static 'carros/images/banner/p10.jpg' %}" alt="" class="img-responsive">
+                </div>
+                <div class="carousel-caption">
+                    <div class="col-md-12 col-xs-12 text-center">
+                    <h2>Proyecto Paul Walker</h2>
+                      <h3 class="animated3"> Con mucho respeto</h3>
+                      <div class="line"></div>
+                      <p class="animated2"> Hecho por <b>@DjangoQuilla</b></p>
+                    </div>
+                </div>
+              </div>
+
+             </div>    <!-- End Carousel Inner -->
+
+            <!-- Controls -->
+            <div class="slides-control ">
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                  <span><i class="fa fa-angle-left"></i></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--/ Slider end -->
+
+<!-- Service Area start -->
+
+    <section id="service">
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="feature_header text-center">
+                            <h3 class="feature_title"><b>Secciones</b> del sitio</h3>
+                            <h4 class="feature_sub">Checa los autos y las marcas que hemos creado <br>para este genial proyecto básico de la comunidad de Django Barranquilla.</h4>
+                            <div class="divider"></div>
+                        </div>
+                    </div>  <!-- Col-md-12 End -->
+                </div>
+                <div class="row">
+                    <div class="main_feature text-center">
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                                <div class="feature_content">
+                                    <i class="fa fa-car"></i>
+                                    <h5>Carros</h5>
+                                    <p>You can not ignore mobile devices anymore and with this theme all your visitors will be very pleased how they see your website.</p>
+                                    <a class="enlace-secciones" href="{% url 'listar_carros' %}">
+                                      <button class="btn btn-main"> Ver Carros</button>
+                                    </a>
+                                </div>
+                            </div>
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                                <div class="feature_content">
+                                    <i class="fa fa-list-ul"></i>
+                                    <h5>Marcas</h5>
+                                    <p>This theme integrates with WordPress in the most awesome way! Functionality is separated from style through uncreadble useful for user. </p>
+                                    <a class="enlace-secciones" href="{% url 'listar_marcas' %}">
+                                      <button class="btn btn-main"> Ver Marcas</button>
+                                    </a>
+                                </div>
+                        </div> <!-- Col-md-4 Single_feature End -->
+                        <!-- <button class="btn btn-main"> Read More</button> -->
+                    </div>
+            </div>  <!-- Row End -->
+        </div>  <!-- Container End -->
+    </section>
+<!-- Service Area End -->
+<!-- About details start -->
+<section id="about-details">
+    <div class="container">
+            <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="feature_header text-center">
+                            <h3 class="feature_title"><b>Habilidades</b> requeridas</h3>
+                            <h4 class="feature_sub">Estas son las habilidades requeridas <br>para desarrollar este proyecto en su totalidad.</h4>
+                            <div class="divider"></div>
+                        </div>
+                    </div>  <!-- Col-md-12 End -->
+                </div>
+            <div class="about-desc">
+                <div class="row">
+                <!-- Left about end -->
+                    <div class="col-md-6">
+                        <div class="single-progress">
+                            <label > Programación Básica <span>90%</span></label>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                <span class="sr-only">90% Complete (success)</span>
+                              </div>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single-progress">
+                            <label > Django Básico <span>70%</span></label>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                <span class="sr-only">70% Complete</span>
+                              </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div> <!--row end -->
+
+                <div class="row">
+                    <div class="col-md-6">
+                         <div class="single-progress">
+                            <label > Git y GitHub<span>40%</span></label>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <span class="sr-only">40% Complete (warning)</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="single-progress">
+                            <label > HTML y CSS <span>60%</span></label>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                <span class="sr-only">60% Complete (danger)</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- 2nd row end -->
+            </div> <!-- about desc end -->
+        </div>
+</section>
+<!-- About details end -->
+
+<div class="clearfix"></div>
+
+<!-- Counter End -->
+<div class="clearfix"></div>
+<section id="video-fact">
+    <div class="container">
+         <div class="row">
+                 <div class="col-md-6 ">
+                    <div class="landing-video">
+                        <div class="video-embed wow fadeIn" data-wow-duration="1s">
+                                <!-- Change the url -->
+                            <iframe src="http://player.vimeo.com/video/125313492?title=0&amp;byline=0&amp;portrait=0&amp;color=8aba56" width="350" height="281" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="video-text">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                          <div class="panel panel-default">
+                            <div class="panel-heading active" role="tab" id="headingOne">
+                              <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Sencillo "See you again"
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body p1">
+                                <i>See you again</i> —en español: «Verte otra vez» es un sencillo de Wiz Khalifa y Charlie Puth. Forma parte de la banda sonora de la película Furious 7 (2015), esta canción aparece en la parte final de la película, como un último homenaje a Paul Walker, quien murió en un accidente automovilístico el 30 de noviembre de 2013. 
+                              </div>
+                            </div>
+                          </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading " role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed"  data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Batiendo records
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body p1">
+                            El remix oficial cuenta con Chris Brown y Tyga. La canción ‘SEE YOU AGAIN’ de Wiz Khalifa, ha batido todos los récords en Spotify. El tema ya es número 1 de la lista mundial de la App de música vía 'streaming' con más de 4,2 millones de escuchas en un solo día, el 13 de abril.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading " role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              La canción con más escuchas
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body p1">
+                            Pero eso no es todo, pues también se ha convertido en la canción con más escuchas en una semana -del 6 al 12 de abril: 21,9 millones. Con solo un mes de su estreno ya ha sido número uno en más de 20 países.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div> 
+        </div><!-- row End -->
+    </div>
+</section>
+<!-- Team MEmber Start -->
+<section id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="feature_header text-center">
+                    <h3 class="feature_title">Nuestros <b>Colaboradores</b></h3>
+                    <h4 class="feature_sub">Sin ellos este ciclo básico de Django Barranquilla no hubiera sido posible. </h4>
+                    <div class="divider"></div>
+                </div>
+            </div>  <!-- Col-md-12 End -->
+
+            <div id="owl-demo" class="owl-carousel owl-theme team-items">
+                <div class="item text-center">
+                    <div class="single-member">
+                        <div class="overlay-hover">
+                            <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/10958945_10155244820255492_893352665995118924_n.jpg?oh=a26164c7e11fd91ef864a7b3467fc358&oe=560F676C" alt="" class="img-responsive">
+                            <div class="overlay-effect">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dignissimos, maxime ea excepturi veritatis itaque. </p>
+                            </div>
+                        </div>
+                        <h3>Javier Daza</h3>
+                        <h5>Organizador</h5>
+                    </div>
+                </div>  <!-- item wrapper end -->
+                <div class="item text-center">
+                    <div class="single-member">
+                        <div class="overlay-hover">
+                            <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/530870_10151089497806636_1897544349_n.jpg?oh=078cc2aba26a396acd2adff5ed6d1335&oe=56215213" alt="" class="img-responsive">
+                            <div class="overlay-effect">
+                                
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dignissimos, maxime ea excepturi veritatis itaque. </p>
+                            </div>
+                        </div>
+                        <h3>Jose Luis Caro</h3>
+                        <h5>Co organizador</h5>
+                    </div>
+                </div>  <!-- item wrapper end -->
+                <div class="item text-center">
+                    <div class="single-member">
+                        <div class="overlay-hover">
+                            <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-frc3/v/t1.0-9/1013904_10151548139022825_985313437_n.jpg?oh=166809e03e11ec0a92074048641bc85f&oe=56534F6B&__gda__=1448913190_ddb1cbdf6051b5f59059fe9de179f14b" alt="" class="img-responsive">
+                            <div class="overlay-effect">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dignissimos, maxime ea excepturi veritatis itaque. </p>
+                            </div>
+                        </div>
+                        <h3>Luis Pallares</h3>
+                        <h5>CTO Compara Mejor</h5>
+                    </div>
+                </div>  <!-- item wrapper end -->
+                <div class="item text-center">
+                    <div class="single-member">
+                        <div class="overlay-hover">
+                            <img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10378163_10152353656921296_1981461822343125561_n.jpg?oh=806f5d24a941fda6a2a2a39b24dde91e&oe=560F24B0" alt="" class="img-responsive">
+                            <div class="overlay-effect">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dignissimos, maxime ea excepturi veritatis itaque. </p>
+                            </div>
+                        </div>
+                        <h3>Leonardo Orozco</h3>
+                        <h5>CTO Kaumer Dealer</h5>
+                    </div>
+                </div>  <!-- item wrapper end -->
+                <div class="item text-center">
+                    <div class="single-member">
+                        <div class="overlay-hover">
+                            <img src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xtp1/v/t1.0-9/10959596_10153652011148084_1752863580797033789_n.jpg?oh=c895765211df886a57c6413095edbd1d&oe=56246C52&__gda__=1448254871_a8bafc09bef144cce1ab1379e378238b" alt="" class="img-responsive">
+                            <div class="overlay-effect">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus dignissimos, maxime ea excepturi veritatis itaque. </p>
+                            </div>
+                        </div>
+                        <h3>Carlos De la Ossa</h3>
+                        <h5>CEO Hablame App</h5>
+                    </div>
+                </div>  <!-- item wrapper end -->
+
+            </div>
+        </div>
+    </div> <!-- Conatiner Team end -->
+    <!-- </div> -->
+
+</section>  <!-- Section TEam End -->
+
+<!-- Our Team Members End -->
+<div class="clearfix"></div>
+
+<!-- bLOG Start -->
+<!-- <section id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="feature_header text-center">
+                    <h3 class="feature_title">Nuestro <b>Blog</b></h3>
+                    <h4 class="feature_sub">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h4>
+                    <div class="divider"></div>
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+             <div class="blog-timeline">
+                <div id="owl-blog" class="owl-carousel owl-theme">
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                               <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic3.jpg' %}" alt="" class="img-responsive"></a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                                <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic4.jpg' %}" alt="" class="img-responsive"></a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                           <a href="blog-single.html"> <h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                                <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic2.jpg' %}" alt="" class="img-responsive"></a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                                <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic5.jpg' %}" alt="" class="img-responsive"> </a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                                <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic1.jpg' %}" alt="" class="img-responsive"></a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                                <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic3.jpg' %}" alt="" class="img-responsive"></a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                                <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic2.jpg' %}" alt="" class="img-responsive"></a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                               <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic4.jpg' %}" alt="" class="img-responsive"></a> 
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                                <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic1.jpg' %}" alt="" class="img-responsive"></a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="single_blog">
+                            <div class="post_img text-center">
+                                <a href="blog-single.html"><img src="{% static 'carros/images/blog/pic5.jpg' %}" alt="" class="img-responsive"></a>
+                                <div class="post-date">
+                                    <span>25</span> 6
+                                </div>
+                            </div>
+                            <a href="blog-single.html"><h4>Lorem ipsum dolor sit amet</h4></a>
+                            <ul class="list-inline">
+                                <li> <i class="fa fa-pencil"></i> John Smith</li>
+                                <li> <i class="fa fa-comments"></i> 12</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus provident quae maxime consequuntur atque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</section> -->
+<!-- bLOG End -->
+
+<!-- Testimonial Start -->
+
+<section id="testimonial" class="wow fadeInUp">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="feature_header text-center">
+                    <h3 class="feature_title"><b>Mensajes</b> sobre Paul</h3>
+                    <h4 class="feature_sub">Estos son algunos de los mensajes de los compañeros de escena de Paul Walker en la película Rápido Y Furioso 7. </h4>
+                    <div class="divider"></div>
+                </div>
+            </div>  <!-- Col-md-12 End -->
+        </div>
+                <div class="row">
+                    <div id="testimonial-carousel" class="owl-carousel owl-theme text-center testimonial-slide">
+                        <div class="item">
+                          <div class="testimonial-thumb">
+                            <img class="img-circle" src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/1004541_10151928076803313_232017553_n.jpg?oh=5aaf50068ba8a305397c89f036ffb3bf&oe=5615AE3B&__gda__=1444327014_4336711584fcf8db3ece4b2f5f5144fb" alt="testimonial" >
+                          </div>
+                          <div class="testimonial-content">
+                            <h3 class="name">Vin Diesel<span>Actor</span></h3>
+                            <p class="testimonial-text">
+                              He was a part of so much in my life… long personal talks with my mother or babysitting the Alpha Angel… he took a certain pride in being uncle Pablo… after all, we were filming a scene in FF4 the day she was born, and he being the only one I told, encouraged me to go in and cut the umbilicle cord.
+                              He was an important part of my transition into fatherhood… that healthy family member, with the most positive outlook on life…
+                              A year ago today… a year of mourning… and his absence still leaves me speechless. We miss you Pablo…
+                            </p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="testimonial-thumb">
+                            <img class="img-circle" src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-frc3/v/l/t1.0-9/1377070_10151722255507406_107462293_n.jpg?oh=0c343aa3ceb19a0a66e403ea41dafff2&oe=561BDBC7" alt="testimonial" > 
+                          </div>
+                          <div class="testimonial-content">
+                            <h3 class="name">Michelle Rodriguez <span>Actriz</span></h3>
+                            <p class="testimonial-text">
+                              “I love you Paul. You’re living in the hearts of all who love you for sure. Sending mad love out to Heaven. Reach Out Worldwide.”
+                            </p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="testimonial-thumb">
+                            <img class="img-circle" src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/1186127_679481932079406_1112613695_n.jpg?oh=62ae241efd01f71ae7df5d107e0b320b&oe=56274FA1&__gda__=1444400910_380ec900f3a8823a3fff1aed500fb7c8" alt="testimonial" >
+                          </div>
+                          <div class="testimonial-content">
+                            <h3 class="name wow bounceInLeft">Tyrese Gibson<span>Actor</span></h3>
+                            <p class="testimonial-text">
+                              A celebration of Paul William Walker will be echoed around the world….  1 year ago today God called an angel home early… In this life one would hope to be this “effective” …. I miss my brother I miss my friend and I miss OUR STAR!!!!! Physically gone but forever alive in our minds, hearts and spirit...
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Navigation start -->
+                    <div class="customNavigation cyprass-carousel-controller">
+                        <a class="prev left">
+                          <i class="fa fa-chevron-left"></i>
+                        </a>
+                        <a class="next right">
+                          <i class="fa fa-chevron-right"></i>
+                        </a>
+                  </div>
+                  <!-- Navigation ENd -->
+                </div>
+            </div> <!-- Row End -->
+</section> <!-- Section Testimonial End -->
+
+<!-- Testimonial Area End -->
+
+<!-- Conatct Area Start-->
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="feature_header text-center">
+                    <h3 class="feature_title"><b>Contáctanos</b></h3>
+                    <h4 class="feature_sub">Este formulario es de prueba. </h4>
+                    <div class="divider"></div>
+                </div>
+        </div>
+        </div>
+        <div class="row">
+             <div class="contact_full">
+                <div class="col-md-6 left">
+                    <div class="left_contact">
+                        <form action="role">
+                            <div class="form-level">
+                                <input name="name" placeholder="Nombre" id="name"  value="" type="text" class="input-block">
+                                <span class="form-icon fa fa-user"></span>
+                            </div>
+                            <div class="form-level">
+                                <input name="email" placeholder="Email" id="mail" class="input-block" value="" type="email">
+                                <span class="form-icon fa fa-envelope-o"></span>
+                            </div>
+                            <div class="form-level">
+                                <input name="name" placeholder="Teléfono" id="phone" class="input-block" value="" type="text">
+                                <span class="form-icon fa fa-phone"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6 right">
+                    <div class="form-level">
+                        <textarea name="" id="messege"  rows="5" class="textarea-block" placeholder="Mensaje"></textarea>
+                        <span class="form-icon fa fa-pencil"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button class="btn btn-main featured">Enviar Ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="g-map" class="no-padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="map" id="map"></div>
+    </div>
+  </div>
+</div>
+<!-- Footer Area Start -->
+{% endblock %}
