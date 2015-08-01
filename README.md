@@ -17,3 +17,6 @@ Habilitando los modelos de administrador de Carros y Marca, y sus filtros para l
 
 ## Tercera etapa
 - TODO
+
+## Cambios por heroku
+- Para instalar en local ya no es requirements.txt sino requirements/local.txt dado que el archivo requirements.txt esta apuntando a las dependencias en producción 
